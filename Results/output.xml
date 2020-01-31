@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.4 on darwin)" generated="20200129 15:54:34.560" rpa="false">
+<suite id="s1" name="Amazon" source="/Users/cymru/PycharmProjects/bot/Tests/amazon.robot">
+<test id="s1-t1" name="User Must Sign In To Purchase">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>http://www.amazon.com</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200129 15:54:34.960" level="INFO">Opening browser 'Firefox' to base url 'http://www.amazon.com'.</msg>
+<msg timestamp="20200129 15:54:34.963" level="INFO">Firefox driver log is always forced to to: /Users/cymru/PycharmProjects/bot/Results/geckodriver-19.log</msg>
+<status status="PASS" starttime="20200129 15:54:34.960" endtime="20200129 15:54:40.311"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Hello, Sign in</arg>
+</arguments>
+<status status="PASS" starttime="20200129 15:54:40.312" endtime="20200129 15:54:40.451"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=twotabsearchtextbox</arg>
+<arg>Ferrari 458</arg>
+</arguments>
+<msg timestamp="20200129 15:54:40.453" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20200129 15:54:40.453" endtime="20200129 15:54:40.706"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[1]/header/div/div[1]/div[3]/div/form/div[2]/div/input</arg>
+</arguments>
+<msg timestamp="20200129 15:54:40.707" level="INFO">Clicking button 'xpath=/html/body/div[1]/header/div/div[1]/div[3]/div/form/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20200129 15:54:40.706" endtime="20200129 15:54:43.011"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>results for "Ferrari 458"</arg>
+</arguments>
+<status status="PASS" starttime="20200129 15:54:43.012" endtime="20200129 15:54:43.072"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Results for search are present on the page</arg>
+</arguments>
+<msg timestamp="20200129 15:54:43.073" level="INFO">Results for search are present on the page</msg>
+<status status="PASS" starttime="20200129 15:54:43.072" endtime="20200129 15:54:43.073"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${SLEEPTIME}</arg>
+</arguments>
+<msg timestamp="20200129 15:54:48.074" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200129 15:54:43.073" endtime="20200129 15:54:48.074"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>css=#search &gt; div.s-desktop-width-max.s-desktop-content.sg-row &gt; div.sg-col-20-of-24.sg-col-28-of-32.sg-col-16-of-20.sg-col.s-right-column.sg-col-32-of-36.sg-col-8-of-12.sg-col-12-of-16.sg-col-24-of-28 &gt; div &gt; span:nth-child(5) &gt; div.s-result-list.s-search-results.sg-row &gt; div:nth-child(4) &gt; div &gt; span &gt; div &gt; div &gt; div:nth-child(3) &gt; h2 &gt; a</arg>
+</arguments>
+<msg timestamp="20200129 15:54:48.075" level="INFO">Clicking link 'css=#search &gt; div.s-desktop-width-max.s-desktop-content.sg-row &gt; div.sg-col-20-of-24.sg-col-28-of-32.sg-col-16-of-20.sg-col.s-right-column.sg-col-32-of-36.sg-col-8-of-12.sg-col-12-of-16.sg-col-24-of-28 &gt; div &gt; span:nth-child(5) &gt; div.s-result-list.s-search-results.sg-row &gt; div:nth-child(4) &gt; div &gt; span &gt; div &gt; div &gt; div:nth-child(3) &gt; h2 &gt; a'.</msg>
+<status status="PASS" starttime="20200129 15:54:48.075" endtime="20200129 15:54:50.642"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${SLEEPTIME}</arg>
+</arguments>
+<msg timestamp="20200129 15:54:55.643" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200129 15:54:50.642" endtime="20200129 15:54:55.643"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=add-to-cart-button</arg>
+</arguments>
+<msg timestamp="20200129 15:54:55.644" level="INFO">Clicking button 'id=add-to-cart-button'.</msg>
+<status status="PASS" starttime="20200129 15:54:55.644" endtime="20200129 15:54:55.911"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>15s</arg>
+</arguments>
+<msg timestamp="20200129 15:55:10.912" level="INFO">Slept 15 seconds</msg>
+<status status="PASS" starttime="20200129 15:54:55.911" endtime="20200129 15:55:10.912"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200129 15:55:10.913" endtime="20200129 15:55:14.671"></status>
+</kw>
+<doc>Using Amazon Services</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20200129 15:54:34.959" endtime="20200129 15:55:14.671" critical="yes"></status>
+</test>
+<doc>"Work with Amazon web page to make purchases, log in, etc."</doc>
+<status status="PASS" starttime="20200129 15:54:34.561" endtime="20200129 15:55:14.672"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Amazon">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
